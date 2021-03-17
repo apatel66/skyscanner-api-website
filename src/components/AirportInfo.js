@@ -47,6 +47,7 @@ function AirportInfo() {
                 <select id="currency" placeholder="Currency" name="currency" value={currency} onChange={e => setQueryCurrency(e.target.value)} required>  
                     <option value="USD" selected>US Dollar</option>
                     <option value="CAD">Canadian Dollar</option>
+                    <option value="GBP">British Pound</option>
                     <option value="CNY">Chinese Yuan</option>
                     <option value="EUR">Euro</option>
                     <option value="DEM">German Mark</option>
