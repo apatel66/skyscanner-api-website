@@ -2,7 +2,7 @@ import React from 'react';
 import './AirportInfo.css';
 
 function AirportInfo() { 
-    return;
+    return null;
 }
 
 export default AirportInfo;
