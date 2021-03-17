@@ -1,9 +1,12 @@
 .airportinfo {
-    width: 80%;
+    background-image: url("./mapPic.jpg");
+    background-size: 102% 145%;
+    background-position-x: 42.5%;
+    background-position-y: 55%;
     margin: 0 auto; 
     padding: 20px; 
-    border: 1px dotted black; 
-    height: 80vh; 
+    border: 1px dotted black;
+    height: 80vh;
     overflow-y: auto;
     display: flex; 
     flex-direction: column;
@@ -31,10 +34,71 @@ label {
     font-size: 20px;
 }
 
-
 #queryInput {
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
-    border-radius: 5px;
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    font-family: "Helvetica", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    width: 175px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#dateFormOne {
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    font-family: "Helvetica", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    width: 175px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+#dateFormTwo {
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    font-family: "Helvetica", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    width: 175px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#currency {
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    font-family: "Helvetica", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    width: 175px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+#submitButton {
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    font-family: "Helvetica", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    width: 110px;
+    height: 50px;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px;
 }
