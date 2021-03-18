@@ -8,7 +8,7 @@ function Flights (props) {
     const places = props.flights['Places'];
     const quotes = props.flights['Quotes'];
 
-    //Don't try to access data if its undefined
+    //Don't try to access data if it's empty/undefined
     if (!places || !carriers || !currencies || !quotes) {
         return null;
     }  
