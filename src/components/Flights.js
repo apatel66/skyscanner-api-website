@@ -7,10 +7,12 @@ function Flights (props) {
     const currencies = props.flights['Currencies'];
     const places = props.flights['Places'];
     const quotes = props.flights['Quotes'];
-    if(!places || !carriers || !currencies || !quotes) return null;
+    if (!places || !carriers || !currencies || !quotes) {
+        return null;
+    }  
     var placeMap = new Map();
     for (var i = 0; i < places.length; ++i) {
-        placeMap.set(places[i].PlaceId, places[i].CityName);
+        placeMap.set(places[i].PlaceId, places[i].CityName + " (" + places[i].IataCode + ")");
     }
     var carriersMap = new Map();
     for (i = 0; i < carriers.length; ++i) {
@@ -28,12 +30,13 @@ function Flights (props) {
         )
     }
 
-    console.log(carriers);
+    /*console.log(carriers);
     console.log(currencies);
     console.log(places);
     console.log(quotes);
     console.log(placeMap);
-    console.log(carriersMap);
+    console.log(carriersMap);*/
+
     return(
         <div className="flights">
             <table className="flightTable">
@@ -49,7 +52,7 @@ function Flights (props) {
 
                 <tbody>
                     {quotes && quotes.map(f => {
-                        return (<tr key="{flight.placeId}">
+                        return (<tr key={f.QuoteId}>
                             <td>{placeMap.get(f.OutboundLeg.OriginId)}</td>
                             <td>{placeMap.get(f.OutboundLeg.DestinationId)}</td>
                             <td>{f.OutboundLeg.DepartureDate.substring(0,10)}</td>
@@ -64,42 +67,3 @@ function Flights (props) {
 }
 
 export default Flights;
-
-
-
-/*import React from 'react';
-import './Places.css';
-
-function Places(props) { 
-    return(
-        <div className = "places">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Departure Code</th>
-                        <th>Departure</th>
-                        <th>Destination Code</th>
-                        <th>Destination</th>
-                        <th>Cost</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    {props.places.map(place => {
-                        return (
-                            <tr id={place.PlaceId}> 
-                                <th>{place.PlaceId}</th>
-                                <th>{place.PlaceName}</th>
-                                <th>{place.DestId}</th>
-                                <th>{place.DestName}</th>
-                                <th>(place.Price)</th>
-                            </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
-        </div>
-    )
-}
-
-export default Places;*/

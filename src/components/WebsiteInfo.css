@@ -1,5 +1,26 @@
 .websiteInfo {
-    left:      100px; /* left corner of container (screen) */
-    height:    80px; 
-    border: 1px solid green;
+    margin-top: 2%;
+    width: 50%;
+    height: 19%;
+    background-color: white;
+    border-radius: 15px;
+    line-height: 100%;
+    border: 3px solid #009879;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.35);
+}
+
+.websiteInfo h3 {
+    padding-top: 4px;
+    padding-bottom: 8px;
+    margin: 10px;
+}
+
+.websiteInfo p {
+    padding-bottom: px;
+    font-weight: 500;
+    margin: 12px;
+}
+
+.websiteInfo span{
+    color: #00b300;
 }

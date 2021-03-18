@@ -1,5 +1,5 @@
 .footer {
-    background-color: #013D5B;
+    background-color: #15396E;
     min-height: 7vh;
     white-space: pre-wrap;
     line-height: 20px;
@@ -14,5 +14,7 @@
     bottom: 0;
     left:0;
     width: 100%;
-    white-space: pre-wrap;
+    font-family: "Helvetica", sans-serif;
+    font-weight: 550;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.3);
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FlightInfo.css';
+import './WebsiteInfo.css';
 import Flights from './Flights';
 
 function FlightInfo() { 
@@ -65,13 +66,14 @@ function FlightInfo() {
                 
                 <button id="submitButton" className="search">Submit!</button>
            </form>
-           { showFlights ? <Flights flights={flights}></Flights> : <></>}
 
            <div className="websiteInfo">
-                <p>Welcome to the Skyscanner Flight Checker</p>
-                <p>Please enter the 3-letter airport codes in the "Departure" and "Destination" fields as well as the the desired departure date, return date and currency</p>
-                <p>Don't know your airport code? <a href="https://airportcod.es/#"target="_blank">Click Here</a></p>
+                <h3>Welcome to the Skyscanner Flight Checker</h3>
+                <p>Please enter the 3-letter airport codes in the "Departure" and "Destination" fields along with the desired departure date, return date, and currency. The best price will be indicated with <span>green</span> text.</p>
+                <p>Don't know your airport code? <a rel="noreferrer" href="https://airportcod.es/#"target="_blank">Click Here</a></p>
             </div>
+
+            { showFlights ? <Flights flights={flights}></Flights> : <></>}
         </div>
     )
 }
