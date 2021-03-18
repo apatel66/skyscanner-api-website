@@ -2,29 +2,46 @@ import React from 'react';
 import './Flights.css';
 
 function Flights (props) { 
+    console.log(props);
+    const carriers = props.flights['Carriers'];
+    const currencies = props.flights['Currencies'];
+    const places = props.flights['Places'];
+    const quotes = props.flights['Quotes'];
+    if(!places || !carriers || !currencies || !quotes) return null;
+    var placeMap = new Map();
+    for (var i = 0; i < places.length; ++i) {
+        placeMap.set(places[i].PlaceId, places[i].CityName);
+    }
+    var carriersMap = new Map();
+    for (i = 0; i < carriers.length; ++i) {
+        carriersMap.set(carriers[i].CarrierId, carriers[i].Name);
+    }
+
+    console.log(carriers);
+    console.log(currencies);
+    console.log(places);
+    console.log(quotes);
+    console.log(placeMap);
+    console.log(carriersMap);
     return(
         <div className="flights">
             <table className="flightTable">
                 <thead>
                     <tr>
-                        <th>Airport ID</th>
-                        <th>Airport Name</th>
-                        <th>Iata Code</th>
-                        <th>City ID</th>
-                        <th>City Name</th>
-                        <th>Country Name</th>
+                        <th>Start City</th>
+                        <th>End City</th>
+                        <th>Carrier</th>
+                        <th>Price</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    {props.flights && props.flights.map(flights => {
-                        return (<tr key="{flights.placeId}">
-                            <td>{flights.PlaceId}</td>
-                            <td>{flights.Name}</td>
-                            <td>{flights.IataCode}</td>
-                            <td>{flights.CityId}</td>
-                            <td>{flights.CityName}</td>
-                            <td>{flights.CountryName}</td>
+                    {quotes && quotes.map(f => {
+                        return (<tr key="{flight.placeId}">
+                            <td>{placeMap.get(f.OutboundLeg.OriginId)}</td>
+                            <td>{placeMap.get(f.OutboundLeg.DestinationId)}</td>
+                            <td>{carriersMap.get(f.OutboundLeg.CarrierIds[0])}</td>
+                            <td>{currencies[0].Symbol+f.MinPrice}</td>
                         </tr>)
                     })}
                 </tbody>

@@ -10,6 +10,12 @@ function FlightInfo() {
     const [destDate,setQueryDestDate] = useState("")
     const [currencyIn,setQueryCurrency] = useState("")
     const [showFlights,setShowFlights] = useState(false)
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = yyyy + '-' + mm + '-' + dd;
+    console.log(today);
 
     function handleSubmit(b) {
         b.preventDefault()
@@ -22,17 +28,11 @@ function FlightInfo() {
                     "useQueryString": true
                 }
             }
-            console.log(dep);
-            console.log(dest);
-            console.log(depDate);
-            console.log(destDate);
-            console.log(currencyIn);
             var reqString = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/" + currencyIn + "/en-US/" + dep + "-sky/" + dest + "-sky/" + depDate + "?" + new URLSearchParams({inboundpartialdate: destDate})
-            console.log(reqString)
             let response = await fetch(reqString, reqOptions)
             response = await response.json()
-            console.log(response)
-            setFlights(response.Places)
+            //console.log(response)
+            setFlights(response)
         }
         fetchMyAPI()
         setShowFlights(true)
@@ -48,8 +48,8 @@ function FlightInfo() {
            <form onSubmit={handleSubmit}>
                 <input id="queryInput" placeholder="Departure" value={dep} onChange={a => setQueryDep(a.target.value)} required/>
                 <input id="queryInput" placeholder="Destination" value={dest} onChange={b => setQueryDest(b.target.value)} required/>
-                <input id="dateFormOne" type="date" name="depDate" value={depDate} onChange={c => setQueryDepDate(c.target.value)} required />
-                <input id="dateFormTwo" type="date" name="destDate" value={destDate} onChange={d => setQueryDestDate(d.target.value)} required />
+                <input id="dateFormOne" type="date" name="depDate" min={today} value={depDate} onChange={c => setQueryDepDate(c.target.value)} required />
+                <input id="dateFormTwo" type="date" name="destDate" min={depDate} value={destDate} onChange={d => setQueryDestDate(d.target.value)} required />
                 <select id="currency" placeholder="Currency" name="currency" value={currencyIn} onChange={e => setQueryCurrency(e.target.value)} required>  
                     <option defaultValue value=""> -- Currency -- </option>
                     <option value="USD">US Dollar</option>
@@ -57,8 +57,6 @@ function FlightInfo() {
                     <option value="GBP">British Pound</option>
                     <option value="CNY">Chinese Yuan</option>
                     <option value="EUR">Euro</option>
-                    <option value="DEM">German Mark</option>
-                    <option value="GRD">Greek Drachma</option>
                     <option value="INR">Indian Rupee</option>
                     <option value="JPY">Japanese Yen</option>
                     <option value="MXN">Mexican Peso</option>
