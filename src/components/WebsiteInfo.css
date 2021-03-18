@@ -1,0 +1,5 @@
+.websiteInfo {
+    left:      100px; /* left corner of container (screen) */
+    height:    80px; 
+    border: 1px solid green;
+}

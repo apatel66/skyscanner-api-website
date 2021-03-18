@@ -18,11 +18,13 @@ function Flights (props) {
     }
     if (quotes.length === 0) {
         return (
-            <table className="flightTable">
-                <thead>
+            <div className="flights">
+                <table className="flightTable">
+                    <thead>
                         <tr> <th>No Result</th> </tr>
-                </thead>
-            </table>
+                    </thead>
+                </table>
+            </div>
         )
     }
 

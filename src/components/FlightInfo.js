@@ -66,6 +66,12 @@ function FlightInfo() {
                 <button id="submitButton" className="search">Submit!</button>
            </form>
            { showFlights ? <Flights flights={flights}></Flights> : <></>}
+
+           <div className="websiteInfo">
+                <p>Welcome to the Skyscanner Flight Checker</p>
+                <p>Please enter the 3-letter airport codes in the "Departure" and "Destination" fields as well as the the desired departure date, return date and currency</p>
+                <p>Don't know your airport code? <a href="https://airportcod.es/#"target="_blank">Click Here</a></p>
+            </div>
         </div>
     )
 }

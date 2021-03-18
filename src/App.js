@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import WebsiteInfo from './components/WebsiteInfo';
 import FlightInfo from './components/FlightInfo';
 import Footer from './components/Footer';
 import './App.css';
@@ -9,7 +10,7 @@ function App() {
     <div className="App">
       <Header title="Skyscanner Flight Checker"></Header>
       <FlightInfo></FlightInfo>
-      <Footer title={'Arjav Patel - 2021\nMade For Capital One Summit Challenge'}></Footer>
+      <Footer title={'Arjav Patel - 2021\nMade For: Capital One Summit Challenge'}></Footer>
     </div>
   );
 }
