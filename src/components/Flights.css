@@ -5,7 +5,6 @@
 .flightTable {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 18px;
     min-width: 950px;
     padding-top: 20px;
 }
@@ -16,14 +15,16 @@
     text-align: center;
     font-weight: bold;
     font-size: 20px;
-    height: 50px;
+    height: 47.5px;
 }
 
-.flightTable tbody th {
+.flightTable tbody td {
+    font-weight: 600;
     padding: 11px 15px;
 }
 
 .flightTable tbody tr {
+    font-size: 17.5px;
     border-bottom: 2px solid #c0c0c0;
     background-color: #ffffffff;
 }

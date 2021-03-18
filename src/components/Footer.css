@@ -1,14 +1,18 @@
 .footer {
     background-color: #013D5B;
-    min-height: 8vh;
+    min-height: 7vh;
+    white-space: pre-wrap;
+    line-height: 20px;
     display: flex; 
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+    font-size: 15px;
+    font-weight: 500;
     color: white;
     position: fixed;
     bottom: 0;
     left:0;
     width: 100%;
+    white-space: pre-wrap;
 }

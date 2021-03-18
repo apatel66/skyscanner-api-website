@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header title="Skyscanner Flight Checker"></Header>
       <FlightInfo></FlightInfo>
-      <Footer title="© Arjav Patel - 2021"></Footer>
+      <Footer title={'Arjav Patel - 2021\nMade For Capital One Summit Challenge'}></Footer>
     </div>
   );
 }

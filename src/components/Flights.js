@@ -1,31 +1,30 @@
 import React from 'react';
-import './Places.css';
+import './Flights.css';
 
-function Places(props) { 
-
+function Flights (props) { 
     return(
         <div className="flights">
-            <table class="flightTable">
+            <table className="flightTable">
                 <thead>
                     <tr>
                         <th>Airport ID</th>
                         <th>Airport Name</th>
-                        <th>Country ID</th>
-                        <th>Region ID</th>
+                        <th>Iata Code</th>
                         <th>City ID</th>
+                        <th>City Name</th>
                         <th>Country Name</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    {props.places && props.places.map(place => {
-                        return (<tr id={place.PlaceId}>
-                            <th>{place.PlaceId}</th>
-                            <th>{place.PlaceName}</th>
-                            <th>{place.CountryId}</th>
-                            <th>{place.RegionId}</th>
-                            <th>{place.CityId}</th>
-                            <th>{place.CountryName}</th>
+                    {props.flights && props.flights.map(flights => {
+                        return (<tr key="{flights.placeId}">
+                            <td>{flights.PlaceId}</td>
+                            <td>{flights.Name}</td>
+                            <td>{flights.IataCode}</td>
+                            <td>{flights.CityId}</td>
+                            <td>{flights.CityName}</td>
+                            <td>{flights.CountryName}</td>
                         </tr>)
                     })}
                 </tbody>
@@ -34,7 +33,9 @@ function Places(props) {
     )
 }
 
-export default Places;
+export default Flights;
+
+
 
 /*import React from 'react';
 import './Places.css';
