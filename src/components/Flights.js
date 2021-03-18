@@ -16,6 +16,15 @@ function Flights (props) {
     for (i = 0; i < carriers.length; ++i) {
         carriersMap.set(carriers[i].CarrierId, carriers[i].Name);
     }
+    if (quotes.length === 0) {
+        return (
+            <table className="flightTable">
+                <thead>
+                        <tr> <th>No Result</th> </tr>
+                </thead>
+            </table>
+        )
+    }
 
     console.log(carriers);
     console.log(currencies);
@@ -30,6 +39,7 @@ function Flights (props) {
                     <tr>
                         <th>Start City</th>
                         <th>End City</th>
+                        <th>Date</th>
                         <th>Carrier</th>
                         <th>Price</th>
                     </tr>
@@ -40,6 +50,7 @@ function Flights (props) {
                         return (<tr key="{flight.placeId}">
                             <td>{placeMap.get(f.OutboundLeg.OriginId)}</td>
                             <td>{placeMap.get(f.OutboundLeg.DestinationId)}</td>
+                            <td>{f.OutboundLeg.DepartureDate.substring(0,10)}</td>
                             <td>{carriersMap.get(f.OutboundLeg.CarrierIds[0])}</td>
                             <td>{currencies[0].Symbol+f.MinPrice}</td>
                         </tr>)

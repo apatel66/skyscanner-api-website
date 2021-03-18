@@ -28,7 +28,7 @@ function FlightInfo() {
                     "useQueryString": true
                 }
             }
-            var reqString = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/" + currencyIn + "/en-US/" + dep + "-sky/" + dest + "-sky/" + depDate + "?" + new URLSearchParams({inboundpartialdate: destDate})
+            var reqString = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/" + currencyIn + "/en-US/" + dep + "-sky/" + dest + "-sky/" + depDate + "/?" + new URLSearchParams({inboundpartialdate: destDate});
             let response = await fetch(reqString, reqOptions)
             response = await response.json()
             //console.log(response)
@@ -48,8 +48,8 @@ function FlightInfo() {
            <form onSubmit={handleSubmit}>
                 <input id="queryInput" placeholder="Departure" value={dep} onChange={a => setQueryDep(a.target.value)} required/>
                 <input id="queryInput" placeholder="Destination" value={dest} onChange={b => setQueryDest(b.target.value)} required/>
-                <input id="dateFormOne" type="date" name="depDate" min={today} value={depDate} onChange={c => setQueryDepDate(c.target.value)} required />
-                <input id="dateFormTwo" type="date" name="destDate" min={depDate} value={destDate} onChange={d => setQueryDestDate(d.target.value)} required />
+                <input id="dateFormOne" type="month" name="depDate" min={today} value={depDate} onChange={c => setQueryDepDate(c.target.value)} required />
+                <input id="dateFormTwo" type="month" name="destDate" min={depDate} value={destDate} onChange={d => setQueryDestDate(d.target.value)} required />
                 <select id="currency" placeholder="Currency" name="currency" value={currencyIn} onChange={e => setQueryCurrency(e.target.value)} required>  
                     <option defaultValue value=""> -- Currency -- </option>
                     <option value="USD">US Dollar</option>

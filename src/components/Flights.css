@@ -36,3 +36,7 @@
 .flightTable tbody tr:last-of-type {
     border-bottom: 7px solid #009879;
 } 
+
+.flightTable tbody tr:first-child {
+    color: #00b300;
+}
