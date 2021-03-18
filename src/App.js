@@ -5,10 +5,11 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  //Build the different sections of the website
   return (
     <div className="App">
       <Header title="Skyscanner Flight Checker"></Header>
-      <FlightInfo></FlightInfo>
+      <FlightInfo></FlightInfo> 
       <Footer title={'Arjav Patel - 2021\nMade For: Capital One Summit Challenge'}></Footer>
     </div>
   );

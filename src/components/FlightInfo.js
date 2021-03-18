@@ -4,6 +4,8 @@ import './WebsiteInfo.css';
 import Flights from './Flights';
 
 function FlightInfo() { 
+
+    //Create the variables for the different paramenters we need
     const [flights,setFlights] = useState([])
     const [dep,setQueryDep] = useState("")
     const [dest,setQueryDest] = useState("")
@@ -11,12 +13,13 @@ function FlightInfo() {
     const [destDate,setQueryDestDate] = useState("")
     const [currencyIn,setQueryCurrency] = useState("")
     const [showFlights,setShowFlights] = useState(false)
+
+    //Get today's date to use as a minimum for the data inputs
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var yyyy = today.getFullYear();
     today = yyyy + '-' + mm + '-' + dd;
-    console.log(today);
 
     function handleSubmit(b) {
         b.preventDefault()
@@ -29,12 +32,15 @@ function FlightInfo() {
                     "useQueryString": true
                 }
             }
+
+            //Build the api string with the variables
             var reqString = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/" + currencyIn + "/en-US/" + dep + "-sky/" + dest + "-sky/" + depDate + "/?" + new URLSearchParams({inboundpartialdate: destDate});
             let response = await fetch(reqString, reqOptions)
             response = await response.json()
-            //console.log(response)
             setFlights(response)
         }
+
+        //Set default values
         fetchMyAPI()
         setShowFlights(true)
         setQueryDep("")
@@ -44,6 +50,8 @@ function FlightInfo() {
         setQueryCurrency("")
     }
 
+    //Create the different types of input: Text - Airports, Calendar - Date, Select - Currency
+    //Show a small text box about how to use the website for the user
     return(
         <div className="flightInfo">
            <form onSubmit={handleSubmit}>
@@ -66,11 +74,11 @@ function FlightInfo() {
                 
                 <button id="submitButton" className="search">Submit!</button>
            </form>
-
+           
            <div className="websiteInfo">
                 <h3>Welcome to the Skyscanner Flight Checker</h3>
                 <p>Please enter the 3-letter airport codes in the "Departure" and "Destination" fields along with the desired departure date, return date, and currency. The best price will be indicated with <span>green</span> text.</p>
-                <p>Don't know your airport code? <a rel="noreferrer" href="https://airportcod.es/#"target="_blank">Click Here</a></p>
+                <p>Don't know the airport codes? <a rel="noreferrer" href="https://airportcod.es/#"target="_blank">Click Here</a></p>
             </div>
 
             { showFlights ? <Flights flights={flights}></Flights> : <></>}
