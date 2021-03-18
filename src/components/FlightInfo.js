@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './AirportInfo.css';
+import './FlightInfo.css';
 import Places from './Places';
 
-function AirportInfo() { 
+function FlightInfo() { 
     const [places,setPlaces] = useState([])
     const [dep,setQueryDep] = useState("")
     const [dest,setQueryDest] = useState("")
@@ -17,12 +17,13 @@ function AirportInfo() {
             const reqOptions = {
                 method: 'GET',
                 headers: {
-                    "x-rapidapi-key": "fd70453b81mshcca11fb73ba70fep1c3bc4jsn772a03bf213d",
+                    //"RapidAPI App": "default-application_5126913",
+                    "x-rapidapi-key": `${process.env.REACT_APP_API_KEY}`,
                     "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
                     "useQueryString": true
                 }
             }
-            let response = await fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?" + new URLSearchParams({dep: dep}), reqOptions)
+            let response = await fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?" + new URLSearchParams({query: dep}), reqOptions)
             response = await response.json()
             console.log(response.Places)
             setPlaces(response.Places)
@@ -37,7 +38,7 @@ function AirportInfo() {
     }
 
     return(
-        <div className="airportinfo">
+        <div className="flightInfo">
            <form onSubmit={handleSubmit}>
                 <label htmlFor="queryInput">State or Country:</label>
                 <input id="queryInput" placeholder="Departure" value={dep} onChange={a => setQueryDep(a.target.value)} required/>
@@ -65,4 +66,4 @@ function AirportInfo() {
     )
 }
 
-export default AirportInfo;
+export default FlightInfo;

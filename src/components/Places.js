@@ -4,8 +4,8 @@ import './Places.css';
 function Places(props) { 
 
     return(
-        <div className="places">
-            <table>
+        <div className="flights">
+            <table class="flightTable">
                 <thead>
                     <tr>
                         <th>Airport ID</th>
@@ -16,9 +16,9 @@ function Places(props) {
                         <th>Country Name</th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
-                    {props.places.map(place => {
+                    {props.places && props.places.map(place => {
                         return (<tr id={place.PlaceId}>
                             <th>{place.PlaceId}</th>
                             <th>{place.PlaceName}</th>

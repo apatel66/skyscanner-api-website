@@ -1,4 +1,4 @@
-.airportinfo {
+.flightInfo {
     background-image: url("./mapPic.jpg");
     background-size: 102% 145%;
     background-position-x: 42.5%;
@@ -35,7 +35,7 @@ label {
 }
 
 #queryInput {
-    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.25);
     font-family: "Helvetica", sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -44,11 +44,11 @@ label {
     height: 20px;
     border-radius: 10px;
     padding: 10px;
-    margin: 10px;
+    margin: 7.5px;
 }
 
 #dateFormOne {
-    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.25);
     font-family: "Helvetica", sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -58,11 +58,11 @@ label {
     border-radius: 10px;
     padding: 10px;
     margin-left: 40px;
-    margin-right: 10px;
+    margin-right: 6.5px;
 }
 
 #dateFormTwo {
-    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.25);
     font-family: "Helvetica", sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -71,18 +71,18 @@ label {
     height: 20px;
     border-radius: 10px;
     padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
 }
 
 #currency {
-    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.25);
     font-family: "Helvetica", sans-serif;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
     width: 175px;
-    height: 40px;
+    height: 43px;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
@@ -91,7 +91,7 @@ label {
 }
 
 #submitButton {
-    box-shadow: 0 0 15px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.25);
     font-family: "Helvetica", sans-serif;
     font-size: 20px;
     font-weight: 600;

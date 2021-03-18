@@ -1,15 +1,37 @@
-.places {
+.flights {
+    padding-top: 15px;
+}
+
+.flightTable {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    min-width: 950px;
     padding-top: 20px;
 }
 
-table {
-    border-collapse: collapse;
-}  
-
-td, th {
-    border: 1px solid #999;
-    padding: 0.5rem;
-    text-align: left;
+.flightTable thead tr {
+    background-color: #009879;
+    color: #ffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    height: 50px;
 }
-  
-  
+
+.flightTable tbody th {
+    padding: 11px 15px;
+}
+
+.flightTable tbody tr {
+    border-bottom: 2px solid #c0c0c0;
+    background-color: #ffffffff;
+}
+
+.flightTable tbody tr:nth-of-type(even) {
+    background-color: #dcdcdc;
+}
+
+.flightTable tbody tr:last-of-type {
+    border-bottom: 7px solid #009879;
+} 
