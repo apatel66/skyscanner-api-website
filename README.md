@@ -5,7 +5,7 @@ https://apatel66.github.io/skyscanner-api-website/
   1. Download this repository
   2. Navigate to it on the command line
   3. Make sure nvm/npm is installed on your computer
-  4. If it is not, check out [this link](https://github.com/nvm-sh/nvm/blob/v0.35.3/install.sh)
+  4. If it is not, check out [this link](https://www.newline.co/@Adele/how-to-install-nodejs-and-npm-on-macos--22782681)
   5. Enter the command `npm start`, and the website should open up
   6. For the best experience, please use Google Chrome
 
