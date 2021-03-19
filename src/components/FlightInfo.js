@@ -52,14 +52,14 @@ function FlightInfo() {
             console.log(comebackDate);
 
             //Departing flights - Build the api string with the variables and call api
-            var reqString = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/" + currencyIn + "/en-US/" + dep + "-sky/" + dest + "-sky/" + goDate;
+            var reqString = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/" + currencyIn + "/en-US/" + dep + "/" + dest + "/" + goDate;
             let response = await fetch(reqString, reqOptions)
             response = await response.json()
             response["flightType"] = "Departing Flights";
             setOutgoingFlights(response);
 
             //Returning flights - Build the api string with the variables and call api
-            reqString = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/" + currencyIn + "/en-US/" + dest + "-sky/" + dep + "-sky/" + comebackDate;
+            reqString = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/" + currencyIn + "/en-US/" + dest + "/" + dep + "/" + comebackDate;
             response = await fetch(reqString, reqOptions)
             response = await response.json()
             response["flightType"] = "Returning Flights";
