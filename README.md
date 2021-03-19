@@ -31,7 +31,7 @@ Finally, I made a small description about how to use the website, then made some
 
 - User cannot make the departure month earlier than the current month and they cannot make the returning month earlier than the departure month
 
-- If no flights show up,  a "No Results" message should appear
+- If no flights show up,  a "No Results" message should appear, instead of nothing
 
 ### Bugs/Things to Improve
 - Let the user input a city or airport code (with autocomplete)
