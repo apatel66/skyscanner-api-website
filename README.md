@@ -20,7 +20,7 @@ Originally, I wanted to give the user the option to sort the list, but I lacked 
 
 For some reason, the API only returned data for a one-way flight even if I included a return date. So I duplicated my original API call but switched the departure and destination, changed the date and called my table function again to print a list of returning flights as well. 
 
-Finally, I made a small description about how to use the website, then made some changed to the style by rounding corners, adding shadows, and modifying the color-scheme. I originally included a lot of green, however, I read online that good websites should have colorblind-friendly colors to allow for greater accessibility, and a good contrasting/accessible color combination was blue and gold (https://davidmathlogic.com/col...). With this information, I changed the table color and the color that the cheapest flight was displayed in. Now, the colors of the website have a blueish and tan/gold theme, which I believe looks nice.
+Finally, I made a small description about how to use the website, then made some changed to the style by rounding corners, adding shadows, and modifying the color-scheme. I originally included a lot of green, however, I read online that good websites should have colorblind-friendly colors to allow for greater accessibility, and a good contrasting/accessible color combination was blue and gold (https://davidmathlogic.com/colorblind/). With this information, I changed the table color and the color that the cheapest flight was displayed in. Now, the colors of the website have a blueish and tan/gold theme, which I believe looks nice.
 
 ### Features
 - Colorblind-friendly color scheme
