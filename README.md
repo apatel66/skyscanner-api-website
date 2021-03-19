@@ -1,88 +1,47 @@
 # Website Link
 https://apatel66.github.io/skyscanner-api-website/
 
-# react-with-apis
-React Demo with the Skyscanner API
+## Run Locally
+  1. Download this repository
+  2. Navigate to it on the command line
+  3. Make sure nvm/npm is installed on your computer
+  4. If it is not, check out [this link](https://github.com/nvm-sh/nvm/blob/v0.35.3/install.sh)
+  5. Enter the command `npm start`, and the website should open up
+  6. For the best experience, please use Google Chrome
 
-## Setup for Demo
+## Write-Up
+This was my very first project where I worked with HTML/CSS/JavaScript or anything Web related, so there was definitely a learning curve involved. I began with some of the aesthetics, including the header, footer, and background. I thought and old treasure map would be fitting because it has the connotation of adventure and discovery, which are two of the best qualities of traveling. 
 
-### Install Nvm
+I then began creating the input fields for the airports, dates, and currency. I originally had the date input as yyyy-mm-dd, but that forced the users to input a specific day, when it is not required by the API. I decided to give the user some flexibility and let them input a day if they choose.  Looking at the demo code Kristen provided was very beneficial in figuring out how the Javascript functions are put together. 
 
-#### MacOS/Linux
+Building the string for the API request was tricky because I kept getting the string wrong and there were many more parameters. I used console.log() often to make sure the data ended up where I expected it.  I noticed that when the API returned a quote for a flight, it only gave an ID for the carriers, while a separate array contained carriers and their ID.  To circumvent this, I put the carriers and ID into a map, so I could perform a simple lookup (by ID) when it came time to display the flight data. I did the same process for the "Place" values as well.  
 
-To install or update nvm, run the install script for nvm located [here](https://github.com/nvm-sh/nvm/blob/v0.35.3/install.sh) or using the following commands. 
+Originally, I wanted to give the user the option to sort the list, but I lacked the expertise and time to do so. Luckily, the API returned the data from the cheapest to most expensive flight, which is likely the most popular ordering anyways.  Regardless, I displayed the cheapest quote in a different color to easily differentiate it from other flights. 
 
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-```
-```
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-```
+For some reason, the API only returned data for a one-way flight even if I included a return date. So I duplicated my original API call but switched the departure and destination, changed the date and called my table function again to print a list of returning flights as well. 
 
-If you have troubleshooting issues, check out the [github repo](https://github.com/nvm-sh/nvm#troubleshooting-on-linux) for nvm.
+Finally, I made a small description about how to use the website, then made some changed to the style by rounding corners, adding shadows, and modifying the color-scheme. I originally included a lot of green, however, I read online that good websites should have colorblind-friendly colors to allow for greater accessibility, and a good contrasting/accessible color combination was blue and gold (https://davidmathlogic.com/col...). With this information, I changed the table color and the color that the cheapest flight was displayed in. Now, the colors of the website have a blueish and tan/gold theme, which I believe looks nice.
 
-#### Windows 
+### Features
+- Colorblind-friendly color scheme
 
-To install nvm on Windows, download the installer [here](https://github.com/coreybutler/nvm-windows/releases).
+- Allows users choose if they want to put the day of the month
 
-If you have issues or need more info, check out the [github repo](https://github.com/coreybutler/nvm-windows) for nvm-windows.
+- Includes an external link to search for IATA airport codes
 
-### Install node
+- User cannot make the departure month earlier than the current month and they cannot make the returning month earlier than the departure month
 
-We need to install the latest version of node and make sure we use it.
+- If no flights show up,  a "No Results" message should appear
 
-```
-nvm install 14
-nvm use 14
-node --version
-```
+### Bugs/Things to Improve
+- Let the user input a city or airport code (with autocomplete)
 
-## React Demo
+- Better input checking with the dates
 
-This repo contains starter code (with some CSS formatting and the file structure) and the finished code from the demo. Take a peek or try running it locally by running a few commands below. 
+- List sorting
 
-```
-git clone https://github.com/kristenkoyanagi/react-with-apis
-cd react-with-apis
-cd starter-app #or finished-app
-yarn install  #or npm install
-yarn start #or npm start
-```
+- Background image does not scale well on screens with different dimensions
 
-### Add your API key
-1. Change `.env.example` to `.env`
-2. Sign up for a free API Key at [Skyscanner API link](https://rapidapi.com/skyscanner/api/skyscanner-flight-search) 
-3. Make sure your API key enabled
-4. Add your API key to `.env` in the space provided
-5. Restart your app
+- The prices seem to be very low (but that appears to be the API's fault)
 
-## If you want to build an app from scratch
-
-Run the [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html)
-
-Run either block of commands below.
-```
-npm init react-app my-app
-cd my-app
-npm start
-```
-``` 
-npx create-react-app my-app
-cd my-app
-npm start
-```
-
-[npm](https://www.npmjs.com/) and [yarn](https://yarnpkg.com/) are separate node package managers that helps you install dependencies, test, run, and build your app. You can use either one as long as you stick with one.
-
-
-### Check your starter app
-
-If you open [http://localhost:3000](http://localhost:3000), you should see the starter app running from the `create-react-app` command.
-
-
-## Free React Resources
-Check some of these out if you want to learn more about React:
-- [React Tutorial (docs)](https://reactjs.org/tutorial/tutorial.html)
-- [The Beginner's Guide to React (egghead.io videos)](https://egghead.io/courses/the-beginner-s-guide-to-react)
-- [Interactive React Challenges (freecodecamp)](https://www.freecodecamp.org/learn/front-end-libraries/react/)
-- [Full React Course 2020 (YouTube)](https://www.youtube.com/watch?v=4UZrsTqkcW4)
+- Does not look as nice on other browsers (Chrome works the best)
