@@ -52,10 +52,10 @@ label {
 #dateFormOne {
     box-shadow: 0 0 20px 10px rgba(0,0,0,0.35);
     font-family: "Helvetica", sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     text-align: center;
-    width: 175px;
+    width: 150px;
     height: 20px;
     border-radius: 10px;
     padding: 10px;
@@ -66,10 +66,10 @@ label {
 #dateFormTwo {
     box-shadow: 0 0 20px 10px rgba(0,0,0,0.35);
     font-family: "Helvetica", sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     text-align: center;
-    width: 175px;
+    width: 150px;
     height: 20px;
     border-radius: 10px;
     padding: 10px;
@@ -87,8 +87,8 @@ label {
     height: 20px;
     border-radius: 10px;
     padding: 10px;
-    margin-left: 7.5px;
-    margin-right: 7.5px;
+    margin-left: 3px;
+    margin-right: 12px;
 }
 
 #dayTwo {
@@ -101,7 +101,8 @@ label {
     height: 20px;
     border-radius: 10px;
     padding: 10px;
-    margin: 7.5px;
+    margin-left: 3px;
+    margin-right: 7.5px;
 }
 
 #currency {
@@ -110,13 +111,13 @@ label {
     font-size: 20px;
     font-weight: 400;
     text-align: center;
-    width: 150px;
+    width: 175px;
     height: 43px;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     margin-left: 35px;
-    margin-right: 20px;
+    margin-right: 32.5px;
 }
 
 #submitButton {
@@ -125,13 +126,9 @@ label {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    width: 110px;
-    height: 50px;
+    width: 100px;
+    height: 55px;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-}
-
-#required {
-    left: 800px;
 }

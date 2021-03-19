@@ -23,7 +23,7 @@ function FlightInfo() {
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var yyyy = today.getFullYear();
-    today = yyyy + '-' + mm + '-' + dd;
+    today = yyyy + '-' + mm;
 
     function handleSubmit(b) {
         b.preventDefault()
@@ -103,7 +103,7 @@ function FlightInfo() {
                     <option value="RUB">Russian Ruble</option>
                 </select>
                 
-                <button id="submitButton" className="search">Submit!</button>
+                <button id="submitButton" className="search">Search</button>
            </form>
            
            <div className="websiteInfo">
