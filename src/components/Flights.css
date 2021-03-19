@@ -13,7 +13,7 @@
 }
 
 .flightTable thead tr {
-    background-color: #009879;
+    background-color: #26AB9F;
     color: #ffff;
     text-align: center;
     font-weight: bold;
@@ -37,9 +37,9 @@
 }
 
 .flightTable tbody tr:last-of-type {
-    border-bottom: 7px solid #009879;
+    border-bottom: 7px solid #26AB9F;
 } 
 
 .flightTable tbody tr:first-child {
-    color: #00b300;
+    color: #BB870B;
 }

@@ -108,7 +108,7 @@ function FlightInfo() {
            
            <div className="websiteInfo">
                 <h3>Welcome to the Skyscanner Flight Checker</h3>
-                <p>Please enter the 3-letter airport codes along with the desired departure date, return date, and currency. The "Day" fields are not required. The best price will be indicated with <span>green</span> text.</p>
+                <p>Please enter the 3-letter airport codes along with the desired departure date, return date, and currency. The "Day" fields are not required. The best price will be indicated with <span>golden</span> text.</p>
                 <p>Don't know the airport codes? <a rel="noreferrer" href="https://airportcod.es/#"target="_blank">Click Here</a></p>
             </div>
 
