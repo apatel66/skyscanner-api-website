@@ -7,6 +7,7 @@ function Flights (props) {
     const currencies = props.flights['Currencies'];
     const places = props.flights['Places'];
     const quotes = props.flights['Quotes'];
+    const flightStyle = props.flights['flightType'];
 
     //Don't try to access data if it's empty/undefined
     if (!places || !carriers || !currencies || !quotes) {
@@ -29,10 +30,12 @@ function Flights (props) {
     if (quotes.length === 0) {
         return (
             <div className="flights">
+                <div className="flightHeaders"><p>{flightStyle}</p></div>
                 <table className="flightTable">
                     <thead>
                         <tr> <th>No Result</th> </tr>
                     </thead>
+                    <tbody></tbody>
                 </table>
             </div>
         )
@@ -48,6 +51,7 @@ function Flights (props) {
     //Use the maps created earlier to get the required data
     return(
         <div className="flights">
+            <div className="flightHeaders"><p>{flightStyle}</p></div>
             <table className="flightTable">
                 <thead>
                     <tr>
