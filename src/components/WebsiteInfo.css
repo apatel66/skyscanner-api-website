@@ -1,11 +1,11 @@
 .websiteInfo {
-    margin-top: 2%;
-    margin-bottom: 3%;
-    width: 50%;
-    height: 19%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 750px;
+    height: 125px;
     background-color: white;
     border-radius: 15px;
-    line-height: 120%;
+    line-height: 19px;
     border: 4px solid #26AB9F;
     box-shadow: 0 0 20px 10px rgba(0,0,0,0.35);
 }
@@ -32,7 +32,7 @@
     font-weight: 600;
     padding-top: 1px;
     padding-bottom: 40px;
-    width: 22%;
+    width: 220px;
     height: 25px;
     color: white;
     background-color: #26AB9F;

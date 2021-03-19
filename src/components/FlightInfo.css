@@ -2,9 +2,9 @@
 /* Picture Source: https://www.art.com/products/p22969948945-sa-i7890700/andrey-kuzmin-aged-treasure-map-background.htm?savedConfig=true */
 .flightInfo {
     background-image: url("./mapPic.jpg");
-    background-size: 105% 145%;
-    background-position-x: 60%;
-    background-position-y: 57%;
+    background-size: 2000px 1500px;
+    background-position-x: 50%;
+    background-position-y: 60%;
     margin: 0 auto; 
     padding: 20px; 
     border: 1px dotted black;
