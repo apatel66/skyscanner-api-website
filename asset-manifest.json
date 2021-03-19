@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/skyscanner-api-website/static/css/main.ed2f3e13.chunk.css",
+    "main.css": "/skyscanner-api-website/static/css/main.5c1d62b8.chunk.css",
     "main.js": "/skyscanner-api-website/static/js/main.98f8d864.chunk.js",
     "main.js.map": "/skyscanner-api-website/static/js/main.98f8d864.chunk.js.map",
     "runtime-main.js": "/skyscanner-api-website/static/js/runtime-main.e493027f.js",
@@ -10,14 +10,14 @@
     "static/js/3.0d49cd38.chunk.js": "/skyscanner-api-website/static/js/3.0d49cd38.chunk.js",
     "static/js/3.0d49cd38.chunk.js.map": "/skyscanner-api-website/static/js/3.0d49cd38.chunk.js.map",
     "index.html": "/skyscanner-api-website/index.html",
-    "static/css/main.ed2f3e13.chunk.css.map": "/skyscanner-api-website/static/css/main.ed2f3e13.chunk.css.map",
+    "static/css/main.5c1d62b8.chunk.css.map": "/skyscanner-api-website/static/css/main.5c1d62b8.chunk.css.map",
     "static/js/2.af8fd42f.chunk.js.LICENSE.txt": "/skyscanner-api-website/static/js/2.af8fd42f.chunk.js.LICENSE.txt",
     "static/media/FlightInfo.css": "/skyscanner-api-website/static/media/mapPic.74940dc2.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.e493027f.js",
     "static/js/2.af8fd42f.chunk.js",
-    "static/css/main.ed2f3e13.chunk.css",
+    "static/css/main.5c1d62b8.chunk.css",
     "static/js/main.98f8d864.chunk.js"
   ]
 }
