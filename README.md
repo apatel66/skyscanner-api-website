@@ -1,5 +1,6 @@
-# Website Link (Use on Google Chrome for best experience)
+# Website Link 
 https://apatel66.github.io/skyscanner-api-website/
+(Use on Google Chrome for best experience)
 
 ## Run Locally
   1. Download this repository
