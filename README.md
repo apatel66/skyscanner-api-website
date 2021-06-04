@@ -1,4 +1,4 @@
-# Website Link
+# Website Link (Use on Google Chrome for best experience)
 https://apatel66.github.io/skyscanner-api-website/
 
 ## Run Locally
